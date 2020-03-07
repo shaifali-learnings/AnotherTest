@@ -17,7 +17,7 @@ public class StreamIOSamples {
 		return filteredList;
 	}
 	
-	@RequestMapping("/getList")
+	@RequestMapping("/getList2")
 	public List<String> getListFromSample2(){
 		List<String> list1 = Arrays.asList("One","two","three","tfour","Five");
 		List<String> filteredList =list1.stream().filter(t -> t.startsWith("t")).collect(Collectors.toList());
