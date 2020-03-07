@@ -1,15 +1,21 @@
-pipeline{
+pipeline {
+    agent any
 
-agent any
-	{
-	stages{
-		stage('Build'){
-					steps{
-							withMaven(maven:'maven'){
-							sh 'mvn clean package'
-							}
-						 }
-					   }
-		}
-	}
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
